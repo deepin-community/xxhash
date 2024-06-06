@@ -1,6 +1,7 @@
 #!/usr/bin/make -f
 
 #export DH_VERBOSE=1
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 include /usr/share/dpkg/architecture.mk
 
@@ -17,3 +18,6 @@ override_dh_auto_install:
 
 # not to be run, removes compiled files
 override_dh_auto_test:
+
+# do not check for uninstalled man pages
+override_dh_missing:
