@@ -1,3 +1,23 @@
+xxhash (0.8.3-2) unstable; urgency=medium
+
+  * Fix FTBFS by adding specific symbols for i386 and amd64.
+    (Closes: #1092100)
+
+ -- Josue Ortega <josue@debian.org>  Sat, 04 Jan 2025 17:06:24 -0600
+
+xxhash (0.8.3-1) unstable; urgency=medium
+
+  * New upstream release 0.8.3:
+  * Update libxxhash0.symbols file:
+    + Add XXH_featureTest@Base symbol.
+    + Update debian/rules to export LIBXXH_DISPATCH enabling dispatch
+      symbols that were disabled by upstream.
+  * Update copyright holder year for debian/*.
+  * Add Build-Depends-Package entry to libxxhash0.symbols
+  * Bump Standards-Version to 4.7.0. No changes were required.
+
+ -- Josue Ortega <josue@debian.org>  Fri, 03 Jan 2025 16:30:13 -0600
+
 xxhash (0.8.2-2) unstable; urgency=medium
 
   * d/patches: fix libxxhash.pc.in. (Closes: #1051776). Thanks to
